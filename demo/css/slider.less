@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* Slider v1.0.0 by qingfeng 2017-01-18 */
+// reset
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+
+// Slider插件主要样式
+.slider {
+	position: relative;
+	overflow: hidden;
+	// 主要容器
+	.slider-container {
+		position: relative;
+		left: 50%;
+		margin-left: -960px;
+		width: 1920px;
+		height: 400px;
+		overflow: hidden;
+	}
+	// 容纳图片的容器
+	.slider-wrap {
+		position: absolute;
+		width: 1000%;
+		li {
+			float: left;
+			img {
+				width: 1920px;
+				height: 400px;
+			}
+		}
+	}
+	// 左右箭头
+	.slider-next {
+		position: absolute;
+		left: 20px;
+		top: 160px;
+		width: 41px;
+		height: 70px;
+		background: url(../images/left.png) no-repeat;
+	}
+	.slider-prev {
+		position: absolute;
+		right: 20px;
+		top: 160px;
+		width: 41px;
+		height: 70px;
+		background: url(../images/right.png) no-repeat;
+	}
+	// 分页按钮
+	.slider-nav {
+		position: absolute;
+		bottom: 20px;
+		width: 100%;
+		ol {
+			text-align: center;
+		}
+		li {
+			display: inline-block;
+			margin: 0 5px;
+			width: 14px;
+			height: 14px;
+			line-height: 14px;
+			text-align: center;
+			font-size: 12px;
+			font-family: '微软雅黑';
+			color: #fff;
+			border-radius: 100%;
+			background: #333;
+		}
+		li:hover {
+			cursor: pointer;
+		}
+		.active {
+			background: #4684c3;
+		}
+	}
+}
